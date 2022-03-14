@@ -1,0 +1,104 @@
+:root {
+    --bg-color: rgb(28, 22, 43);
+    --dot-color: rgb(167, 153, 204);
+    --main-color: rgb(39, 45, 63);
+    --light-bg: rgb(52, 59, 78);
+    --white: rgb(255, 255, 255);
+    --dot-size: 1px;
+    --dot-space: 22px;
+}
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--light-bg);
+}
+header {
+    padding: 1rem;
+    background-color: var(--main-color);
+}
+header::after{
+    position: absolute;
+    content: "";
+    height: 20rem;
+    width: 50%;
+    background: linear-gradient(to right, var(--main-color) 40%, var(--light-bg) 100%);
+    top: -11rem;
+    left: -22vw;
+    transform: rotate(45deg);
+    opacity: .4;
+    border-radius: 4rem;
+}
+header::before{
+    position: absolute;
+    content: "";
+    height: 20rem;
+    width: 50%;
+    background: linear-gradient(to left, var(--main-color) 40%, var(--light-bg) 100%);
+    top: -11rem;
+    right: -22vw;
+    transform: rotate(-35deg);
+    opacity: .4;
+    border-radius: 4rem;
+}
+h1,
+h2 {
+    margin: 5px 0;
+    position: relative;
+    z-index: 5;
+}
+a{
+    color:var(--dot-color);
+}
+a:visited{
+    color:royalblue;
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    background-color: var(--light-bg);
+}
+main h3 {
+    height: 50px;
+    margin: 0;
+    line-height: 50px;
+    position: relative;
+    z-index: 10;
+    background-color: var(--light-bg);
+}
+.cp_embed_wrapper {
+    height: 350px;
+    position: relative;
+    z-index: 20;
+}
+.cp_embed_wrapper iframe {
+    height: 100%;
+}
+main::after,
+main::before{
+    display: flex;
+    content: "";
+    position: absolute;
+    width: 45%;
+    height: 12rem;
+    background-image: radial-gradient(var(--white) 2px,transparent 0);
+    background-size: 20px 20px;
+    background-position: 0 0;
+    opacity: .09;
+    z-index: 10;
+}
+main::before{
+    right:0;
+    bottom: 0;
+}
+@media screen and (max-width: 600px) {
+    header::after{
+        top: -7rem;
+        left: -37vw;
+    }
+    header::before{
+        top: -15rem;
+        right: -14vw;
+    }
+}
