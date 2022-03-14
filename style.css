@@ -51,6 +51,9 @@ h2 {
 a{
     color:var(--dot-color);
 }
+a:hover{
+    opacity: .8;
+}
 a:visited{
     color:royalblue;
 }
