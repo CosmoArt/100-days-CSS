@@ -13,6 +13,11 @@ body {
     text-align: center;
     color: var(--white);
     background-color: var(--light-bg);
+    overflow-x: hidden;
+    position: relative;
+}
+html{
+    overflow-x: hidden;
 }
 header {
     padding: 1rem;
@@ -50,6 +55,9 @@ h2 {
 }
 a{
     color:var(--dot-color);
+}
+a:hover{
+    opacity: .8;
 }
 a:visited{
     color:royalblue;
